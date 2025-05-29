@@ -1,0 +1,6 @@
+{
+  "endit.command.success": "Set the end spawn point to %s, %s, %s",
+  "endit.command.failed": "Command error: %s",
+  "endit.command.outoftheworld": "Position is outside the End world border.",
+  "endit.command.ycoordinate": "Y coordinate must be between 2 and 257."
+}
