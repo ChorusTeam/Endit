@@ -3,6 +3,7 @@ package net.yeoxuhang.endit.platform;
 import net.yeoxuhang.endit.Endit;
 import net.yeoxuhang.endit.platform.services.IPlatformHelper;
 
+import java.util.Iterator;
 import java.util.ServiceLoader;
 
 public class Services {
@@ -10,8 +11,13 @@ public class Services {
     public static final IPlatformHelper PLATFORM = load(IPlatformHelper.class);
 
     public static <T> T load(Class<T> clazz) {
-        final T loadedService = ServiceLoader.load(clazz).findFirst().orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
-        Endit.LOGGER.debug("Loaded {} for service {}", loadedService, clazz);
-        return loadedService;
+        ServiceLoader<T> loader = ServiceLoader.load(clazz);
+        Iterator<T> iterator = loader.iterator();
+        if (iterator.hasNext()) {
+            T service = iterator.next();
+            Endit.LOGGER.debug("Loaded {} for service {}", service, clazz);
+            return service;
+        }
+        throw new NullPointerException("Failed to load service for " + clazz.getName());
     }
 }

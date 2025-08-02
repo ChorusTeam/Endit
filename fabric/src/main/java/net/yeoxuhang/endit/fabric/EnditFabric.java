@@ -1,10 +1,10 @@
 package net.yeoxuhang.endit.fabric;
 
 import com.mojang.brigadier.CommandDispatcher;
+import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.commands.CommandSourceStack;
 import net.yeoxuhang.endit.Endit;
-import net.fabricmc.api.ModInitializer;
 import net.yeoxuhang.endit.command.EndSpawnCommand;
 
 public class EnditFabric implements ModInitializer {

@@ -2,7 +2,6 @@ package net.yeoxuhang.endit.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.BlockPos;
 import net.yeoxuhang.endit.platform.Services;
 
