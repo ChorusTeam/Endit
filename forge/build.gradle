@@ -4,7 +4,6 @@ plugins {
 loom {
     forge {
         mixinConfig "endit-common.mixins.json"
-        mixinConfig "endit.mixins.json"
     }
 }
 architectury {
@@ -67,7 +66,7 @@ components.java {
 publishing {
     publications {
         mavenForge(MavenPublication) {
-            artifactId = rootProject.archives_base_name + "-" + project.name
+            artifactId = rootProject.mod_id + "-" + project.name
             from components.java
         }
     }

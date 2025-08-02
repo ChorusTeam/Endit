@@ -10,6 +10,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 import net.yeoxuhang.endit.Endit;
 import net.yeoxuhang.endit.config.EndPlatformSpawnConfig;
+import net.yeoxuhang.endit.util.CommandUtils;
 
 public class EndSpawnCommand {
 
@@ -41,7 +42,7 @@ public class EndSpawnCommand {
                                 config.z = z;
                                 config.save();
 
-                                context.getSource().sendSuccess(
+                                CommandUtils.sendSuccess(context.getSource(),
                                         Component.translatable("Set the end spawn point to %s, %s, %s", x, y, z),
                                         true
                                 );
@@ -64,7 +65,7 @@ public class EndSpawnCommand {
                             config.z = 0;
                             config.save();
 
-                            context.getSource().sendSuccess(
+                            CommandUtils.sendSuccess(context.getSource(),
                                     Component.translatable("Set the end spawn point to %s, %s, %s", config.x, config.y, config.z),
                                     true
                             );
@@ -84,7 +85,7 @@ public class EndSpawnCommand {
                     int y = config.y;
                     int z = config.z;
 
-                    context.getSource().sendSuccess(
+                    CommandUtils.sendSuccess(context.getSource(),
                             Component.translatable("Current End platform spawn is at %s, %s, %s", x, y, z),
                             false
                     );
