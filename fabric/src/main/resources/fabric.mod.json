@@ -1,34 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "${mod_id}",
+  "id": "endit",
   "version": "${version}",
   "name": "Endit!",
-  "description": "${description}",
-  "authors": [
-    "${mod_author}"
-  ],
-  "contact": {
-    "homepage": "https://modrinth.com/mod/Endit",
-    "issues": "https://github.com/ChorusTeam/Endit/issues",
-    "website": "https://patreon.com/chorus_team",
-    "repo": "https://github.com/ChorusTeam/Endit"
-  },
-  "license": "${license}",
-  "icon": "assets/endit/icon.png",
+  "description": "A simple server-side mod that lets you change the End spawn platform position",
+  "authors": ["Team Chorus", "yeoxuhang"],
+  "contact": {},
+  "license": "LGPL-3.0",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.yeoxuhang.endit.EnditFabric"
+      "net.yeoxuhang.endit.fabric.EnditFabric"
     ]
   },
   "mixins": [
-    "${mod_id}.mixins.json"
+    "endit.mixins.json",
+    "endit-common.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=${fabric_loader_version}",
-    "fabric-api": "*",
-    "minecraft": ">=${minecraft_version}",
-    "java": ">=${java_version}"
+    "fabricloader": ">=0.17.0",
+    "minecraft": ">=1.19.2"
   },
   "custom": {
     "modmenu": {
