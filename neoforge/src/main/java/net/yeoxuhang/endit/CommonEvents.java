@@ -9,6 +9,7 @@ import net.yeoxuhang.endit.command.EndSpawnCommand;
 public class CommonEvents {
     @SubscribeEvent
     public static void registerCommand(RegisterCommandsEvent event){
-        EndSpawnCommand.register(event.getDispatcher());
+        EndSpawnCommand.getSpawn(event.getDispatcher());
+        EndSpawnCommand.setSpawn(event.getDispatcher());
     }
 }

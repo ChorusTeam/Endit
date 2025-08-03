@@ -13,7 +13,8 @@ public class EnditFabric implements ModInitializer {
         Endit.init();
         ServerLifecycleEvents.SERVER_STARTING.register(server -> {
             CommandDispatcher<CommandSourceStack> dispatcher = server.getCommands().getDispatcher();
-            EndSpawnCommand.register(dispatcher);
+            EndSpawnCommand.getSpawn(dispatcher);
+            EndSpawnCommand.setSpawn(dispatcher);
         });
     }
 }
