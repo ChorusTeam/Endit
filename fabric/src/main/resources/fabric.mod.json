@@ -2,15 +2,17 @@
   "schemaVersion": 1,
   "id": "endit",
   "version": "${version}",
-
   "name": "Endit",
-  "description": "",
-  "authors": [],
-  "contact": {},
-
-  "license": "All Rights Reserved",
+  "description": "A simple server-side mod that lets you change the End spawn platform position",
+  "authors": ["Team Chorus", "yeoxuhang"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/Endit",
+    "issues": "https://github.com/ChorusTeam/Endit/issues",
+    "website": "https://patreon.com/chorus_team",
+    "repo": "https://github.com/ChorusTeam/Endit"
+  },
+  "license": "LGPL-3.0",
   "icon": "icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -23,5 +25,14 @@
   "depends": {
     "fabricloader": ">=0.10.0",
     "minecraft": ">=1.16.5"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "endit.discord": "https://discord.gg/PUJ42rkRBY",
+        "endit.patreon": "https://patreon.com/chorus_team",
+        "endit.source": "https://github.com/ChorusTeam/Endit"
+      }
+    }
   }
 }
