@@ -5,7 +5,12 @@
   "name": "Endit!",
   "description": "A simple server-side mod that lets you change the End spawn platform position",
   "authors": ["Team Chorus", "yeoxuhang"],
-  "contact": {},
+  "contact": {
+    "homepage": "https://modrinth.com/mod/Endit",
+    "issues": "https://github.com/ChorusTeam/Endit/issues",
+    "website": "https://patreon.com/chorus_team",
+    "repo": "https://github.com/ChorusTeam/Endit"
+  },
   "license": "LGPL-3.0",
   "icon": "icon.png",
   "environment": "*",
