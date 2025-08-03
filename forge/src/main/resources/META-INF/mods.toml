@@ -6,7 +6,6 @@ issueTrackerURL="https://github.com/ChorusTeam/Endit/issues"
 modId="endit"
 version="${version}"
 displayName="Endit!"
-#updateJSONURL="http://myurl.me/" #optional
 displayURL="https://modrinth.com/mod/endit"
 logoFile="icon.png"
 authors="Team Chorus, yeoxuhang"
